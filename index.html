@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* function show5Blocks(){
+            for(let x =1 ; x<=5; x++){
+                document.write("<h2> Header" + x + "</h2>");
+            }
+        }
+
+        show5Blocks();*/
+
+        function show5Blocks(countBlocks){
+            for(let x =1 ; x<=countBlocks; x++){
+                document.write("<h2> Header" + x + "</h2>");
+            }
+        }
+
+        show5Blocks(2);
+
+        let value1 = 10;
+        let value2 = 40;
+        function showMesseng(){
+            let value1 = 20;
+            console.log(value1);
+        }
+        showMesseng();
+        /*колекция arguments*/
+
+        function show5Blocks(){
+            for(let x =1 ; x<=arguments[0]; x++){
+                document.write('<${arguments[1]}> Header' + x + "</$>");
+            }
+        }
+
+        function test(...arr){
+            for(let el of arr ){
+                console.log(el);
+            }
+        }
+        test(1,2,3,4,5);
+        /*возврат значений*/
+        function sum(val1, val2){
+            let result= val1 + val2;
+            return resalt;
+        }
+        console.log(sum(10,20));
+
+        function generateRandom(max){
+            return Math.trunc(Math.random()*max);
+        }
+
+        /*калькулятор*/
+        function customCalculator(val1,val2,operation){
+            switch(operation){
+                case '+':
+                    return 'сумма чисел: ${val1 + val2}';
+                case '-':
+                    return 'разность чисел: ${val1 + val2}';
+                case '*':
+                    return 'Произведение чисел: ${val1 + val2}';
+                case '/':
+                    return 'Отношение чисел: ${val1 + val2}';
+            }
+        }
+
+        let resalt = customCalculator(2,3,'+');
+        console.log(resalt);
+        console.log(customCalculator(2,3,'+'));
+        console.log(customCalculator(3,2,'-'));
+        console.log(customCalculator(2,3,'*'));
+
+      ( function(name){
+            console.log('hello, ${name}');
+        })('яна');
+
+        /*Function expression*/
+        let test3 = function(x){
+            console.log(x);
+        }
+        test3(10);
+
+
+
+
+    </script>
+    
+</body>
+</html>
